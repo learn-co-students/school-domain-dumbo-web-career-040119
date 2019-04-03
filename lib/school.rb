@@ -20,10 +20,14 @@ class School
   end
 
   def sort
+    # First create an empty hash to store the sorted roster
     sorted_roster = {}
+    # Then iterate over each grade in the roster and set the grade key
+    # equal to the array of students in that grade, sorted alphabetically.
     roster.each do |grade, all_students_in_grade|
       sorted_roster[grade] = all_students_in_grade.sort
     end
+    # Return sorted roster at end b/c we used each.
     sorted_roster
   end
 
