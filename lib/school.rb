@@ -21,8 +21,11 @@ class School
   def grade(grade)
     roster[grade]
   end
-  
+  #my_hash.each{ |key,str| my_hash[key] = "%#{str}%" }
   def sort
+    roster.each do |grade, names|
+      roster[grade] = names.sort
+    end
   end
     
 end
